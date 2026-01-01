@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Calculator with History</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="calculator-wrapper">
+            <!-- Calculator Section -->
+            <div class="calculator">
+                <h1>Calculator</h1>
+                <div class="display-container">
+                    <div class="calculation-display" id="calculationDisplay">0</div>
+                    <div class="result-display" id="resultDisplay">0</div>
+                </div>
+                
+                <div class="buttons">
+                    <button class="btn clear" id="btnC">C</button>
+                    <button class="btn clear" id="btnAC">AC</button>
+                    <button class="btn operator" data-op="/">&divide;</button>
+                    <button class="btn operator" data-op="*">&times;</button>
+                    
+                    <button class="btn number" data-num="7">7</button>
+                    <button class="btn number" data-num="8">8</button>
+                    <button class="btn number" data-num="9">9</button>
+                    <button class="btn operator" data-op="-">-</button>
+                    
+                    <button class="btn number" data-num="4">4</button>
+                    <button class="btn number" data-num="5">5</button>
+                    <button class="btn number" data-num="6">6</button>
+                    <button class="btn operator" data-op="+">+</button>
+                    
+                    <button class="btn number" data-num="1">1</button>
+                    <button class="btn number" data-num="2">2</button>
+                    <button class="btn number" data-num="3">3</button>
+                    <button class="btn equals" id="btnEquals" style="grid-row: span 2;">=</button>
+                    
+                    <button class="btn number zero" data-num="0">0</button>
+                    <button class="btn number" data-num=".">.</button>
+                </div>
+            </div>
+
+            <!-- History Section -->
+            <div class="history-panel">
+                <div class="history-header">
+                    <h2>History</h2>
+                    <button class="clear-history-btn" id="clearHistoryBtn">Clear All</button>
+                </div>
+                <div class="history-list" id="historyList">
+                    <p class="empty-history">No calculations yet</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Built by Shobinn Clark | <a href="https://github.com/Shobinn24" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script src="calculator.js"></script>
+    <script src="history.js"></script>
+    <script src="ui.js"></script>
+</body>
+</html>
